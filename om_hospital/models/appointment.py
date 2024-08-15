@@ -65,7 +65,9 @@ class HospitalAppointment(models.Model):
         self.state = 'in_consultation'
     
     def action_cancel(self):
+        action = self.env.ref('om_hospital.action_cancel_appointment').read()[0]
         self.state = 'cancel'
+        return action
     
     
     priority = fields.Selection([

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+
+    <record id="action_cancel_appointment" model="ir.actions.act_window">
+        <field name="name">Cancel Appointment</field>
+        <field name="res_model">cancel.appointment.wizard</field>
+        <field name="view_mode">form</field>
+        <!-- <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create Cancel Appointment
+            </p>
+        </field> -->
+        <field name="target">new</field>        
+    </record>
+
+       <record id="view_cancel_appointment_form" model="ir.ui.view">
+        <field name="name">cancel.appointment.wizard.form</field>
+        <field name="model">cancel.appointment.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>        
+                    <group>
+                        <field name="appointment_id"/>
+                        <field name="reason"/>
+                    </group>        
+                    <group>
+                        <field name="date_cancel"/>
+                    </group>      
+                </group>
+                
+                
+                <footer>
+                    <button string="Cancel Appointment" special="save" type="object" data-hotkey="j" name="action_cancel" class="btn btn-primary"/>
+                    <button string="Discard" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_cancel_appointment_tree" model="ir.ui.view">
+        <field name="name">Cancel Appointment</field>
+        <field name="model">cancel.appointment.wizard</field>
+        <field name="arch" type="xml">
+            <tree string="Cancelaltion">
+                <field name="appointment_id"  string='Appointment'/>
+            </tree>
+        </field>
+    </record>
+
+
+</odoo>

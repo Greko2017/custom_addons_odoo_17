@@ -14,24 +14,20 @@
                 name="Patients"
                 sequence="0"
                 action="action_hospital_patient"
-                />
-                
-        <menuitem id="menu_appointment_master"
-            name="Appointments"
-            sequence="1"
-            action="action_hospital_appointment">
-            
-        </menuitem>
-            <!-- <menuitem id="menu_male_patient"
-                name="Male Patients"
+            />
+                    
+            <!-- <menuitem id="menu_appointment_master"
+                name="Appointments"
                 sequence="1"
-                action="action_male_patient"
-                /> -->
+                action="action_hospital_appointment">
+                
+            </menuitem> -->
+
             <menuitem id="menu_female_patient"
                 name="Female Patients"
                 sequence="2"
                 action="action_female_patient"
-                />
+            />
 
         </menuitem>
 
@@ -45,6 +41,25 @@
                 sequence="0"
             action="action_hospital_appointment"
                 />
+                
+            <menuitem id="menu_cancel_appointment"
+                name="Cancelation"
+                sequence="1"
+            action="action_cancel_appointment"
+                />
+
+        </menuitem>
+
+        <menuitem id="menu_configuration"
+            name="Configurations"
+            sequence="100">
+            
+            <menuitem id="menu_patient_tag"
+                name="Patient Tags"
+                sequence="0"
+                action="action_patient_tag"
+                />
+                
         </menuitem>
 
         
