@@ -28,8 +28,7 @@ class HospitalAppointment(models.Model):
     )    
 
     ref = fields.Char(
-        string='Reference', related='patient_id.ref'
-    )
+        string='Reference', help='Reference from record') # related='patient_id.ref')
     
     prescription = fields.Html(
         string='Prescription'
@@ -66,7 +65,6 @@ class HospitalAppointment(models.Model):
     
     def action_cancel(self):
         action = self.env.ref('om_hospital.action_cancel_appointment').read()[0]
-        self.state = 'cancel'
         return action
     
     

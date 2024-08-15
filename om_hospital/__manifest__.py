@@ -18,6 +18,7 @@
         'views/appointment_view.xml',
         'views/patient_tag_view.xml',
         'views/menu.xml',
+        'data/sequence_data.xml',
     ],
     'demo': [],
     'installable': True,

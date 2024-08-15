@@ -17,7 +17,6 @@
         # 'views/patient_view.xml',
         # 'views/appointment_view.xml',
         # 'views/patient_tag_view.xml',
-        'data/sequence_data.xml',
         'views/sale_order_view.xml',
     ],
     'demo': [],
